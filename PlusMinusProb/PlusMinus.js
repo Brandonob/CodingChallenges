@@ -9,3 +9,26 @@
 // 0.400000
 // 0.400000
 // 0.200000
+
+// Note To Self: If asked for number value, ansers may have to be converted
+// from string to number.(ParseInt())
+
+function plusMinus(arr) {
+  // Write your code here
+  let positives = 0;
+  let negatives = 0;
+  let zeros = 0;
+
+  arr.forEach((el) => {
+    if (Math.sign(el) === 1) {
+      positives++;
+    } else if (Math.sign(el) === -1) {
+      negatives++;
+    } else if (Math.sign(el) === 0) {
+      zeros++;
+    }
+  });
+  console.log((positives / arr.length).toFixed(6));
+  console.log((negatives / arr.length).toFixed(6));
+  console.log((zeros / arr.length).toFixed(6));
+}
